@@ -7,6 +7,7 @@ import (
 	"net/http"
 )
 
+// DownloadFile downloads a file from the given URL and saves it to the specified filepath.
 
 func DownloadFile(filepath string, url string) {
 	fmt.Printf("Downloading %s -> %s\n", url, filepath)

@@ -5,6 +5,7 @@ import (
 	"os"
 
 	"gamch1k.org/ggit/utils"
+	"gamch1k.org/ggit/database"
 )
 
 
@@ -26,6 +27,13 @@ func InitRepo() {
 	os.Mkdir(rootDir + "/database", 0700)
 
 	utils.DownloadFile(rootDir + "/.ggitignore", "https://raw.githubusercontent.com/GAMch1k/ggit/master/.ggitignore.example")
+	
+	_, err := os.Create(rootDir + "/database/database.db")
+	if utils.ErrorHandler(err) {
+		return
+	}
+
+	database.CreateFields()
 
 	fmt.Println("Created repository")
 }
