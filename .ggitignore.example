@@ -1,0 +1,21 @@
+# Folders to ignore
+.ggit/
+
+# Files to ignore
+*.env
+
+
+# Examples
+#
+# Use / to ignore folder
+# dir/
+# 
+# Use * to ignore files that
+# contains setted literals
+# *.env
+#
+# Use filename to ignore specific file
+# ignoreme.file
+#
+# Use .keep file to keep empty 
+# directory (make sure u are not ignoring it)

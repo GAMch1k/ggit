@@ -43,6 +43,7 @@ func initRepo() {
 	
 	os.Mkdir(rootDir, 0700)
 	os.Mkdir(rootDir + "/commits", 0700)
+	os.Mkdir(rootDir + "/database", 0700)
 
 	err := os.WriteFile(rootDir + "/.ggitignore", []byte(".ggit"), 0700)
 	if utils.ErrorHandler(err) {
